@@ -13,5 +13,6 @@
 
 + (void)getDataWithParameters:(NSDictionary *)parameters completeBlock:(void(^)(BOOL success, id result))complete;
 
++ (void)uploadImageData:(NSData *)imageData andParameters:(NSDictionary *)parameters completeBlock:(void(^)(BOOL sussess,id result))complete;
 
 @end

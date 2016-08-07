@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CSViewController.h"
+#import <SMS_SDK/SMSSDK.h>
 
 @interface AppDelegate ()
 
@@ -18,13 +19,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    
+    self.window.backgroundColor = [UIColor clearColor];
     [self setUpRootViewController];
+    [self setUpMob];
     
   
     
     
     return YES;
+}
+
+
+- (void)setUpMob{
+    [SMSSDK registerApp:MobApp withSecret:MobSecret];
+
+    
 }
 
 - (void)setUpRootViewController {

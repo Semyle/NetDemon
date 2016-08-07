@@ -7,10 +7,16 @@
 //
 
 #import "CSLoginViewController.h"
-#import <Masonry/Masonry.h>
+#import "CSForgetViewController.h"
+#import "CSRegisterViewController.h"
+
 //这里面封装了一个方法，可以让我们通过一个颜色生成一张纯色的图片
 #import "UIImage+Color.h"
 #import "UIButton+BackgroundColor.h"
+#import "UIControl+ActionBlocks.h"
+#import "UIAlertView+Block.h"
+#import "NSString+MD5.h"
+
 
 
 
@@ -24,8 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor colorWithWhite:0.906 alpha:1.000];
-    ;
+    self.view.backgroundColor = [UIColor colorWithRed:0.924 green:1.000 blue:0.940 alpha:1.000];
     self.title = @"登录";
     [self setUpViews];
     
@@ -55,90 +60,72 @@
 }
 
 - (void)setUpViews{
-//    创建登录界面的控件布局
+    // 创建手机号码输入框，密码输入框，登录按钮
+    UITextField *phonetext = [[UITextField alloc] init];
+    [self.view addSubview:phonetext];
+    phonetext.backgroundColor = [UIColor whiteColor];
     
-//    注意：使用Autolayout，就不需要将位置定死
-    UITextField *phoneText = [[UITextField alloc]init];
-    [self.view addSubview:phoneText];
-    phoneText.backgroundColor = [UIColor whiteColor];
-    
-    UITextField *password = [[UITextField alloc]init];
+    UITextField *password = [[UITextField alloc] init];
     [self.view addSubview:password];
     password.backgroundColor = [UIColor whiteColor];
     
-    phoneText.placeholder = @"输入邮箱或者手机号码";
+    phonetext.placeholder = @"输入邮箱或者手机号码";
     password.placeholder = @"输入密码";
     
     password.secureTextEntry = YES;
     
-    UIImageView *phoneLeftImg = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"用户图标"]];
-    UIImageView *pwdleftImg = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"密码图标"]];
-    
-    UIView *phoneLeft = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 64, 64)];
-    UIView *passwordLeft = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 64, 64)];
-    [phoneLeft addSubview:phoneLeftImg];
-    [passwordLeft addSubview:pwdleftImg];
-    [phoneLeftImg mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-//        让视图居中：相对于父控件
+    UIImageView *phoneLeftImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"用户图标"]];
+    UIImageView *passLeftImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"密码图标"]];
+    UIView *phoneLeft = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
+    UIView *passLeft = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
+    [phoneLeft addSubview:phoneLeftImage];
+    [passLeft addSubview:passLeftImage];
+    [phoneLeftImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        // 让视图居中
+        make.center.equalTo(@0);
+    }];
+    [passLeftImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(@0);
     }];
     
-    [pwdleftImg mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.center.equalTo(@0);
-    }];
-    
-//    系统自带的左边视图，右边视图（但是不会自己显示，需要手动设置Mode）
-    phoneText.leftView = phoneLeftImg;
-    password.leftView = pwdleftImg;
-    
-//    手动设置一直都显示
-    phoneText.leftViewMode = UITextFieldViewModeAlways;
+    phonetext.leftView = phoneLeft;
+    password.leftView = passLeft;
+    phonetext.leftViewMode = UITextFieldViewModeAlways;
     password.leftViewMode = UITextFieldViewModeAlways;
     
-//    手写输入框的布置
-//    在写布局的时候，我们添加的所有约束必须能够唯一确定这个视图的位置和大小(至少四个有效约束)
-    [phoneText mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-//        make.left.equalTo(@0);
-//        make.right.equalTo(@0);
-        
-//        上面两句可以合成一句:,前提是约束一样
-        make.left.right.equalTo(@0);
-        
+    // 手写输入框的布局
+    // 在写布局的时候，我们添加的所有约束必须能够唯一确定这个视图的位置和大小
+    [phonetext mas_makeConstraints:^(MASConstraintMaker *make) {
+        //		make.left.equalTo(@0);
+        //		make.right.equalTo(@0);
         make.height.equalTo(@64);
         make.top.equalTo(@120);
-        
-//        Masonry的强大之处：充分考虑到了我们写约束的时候越简单越好，所以应用了链式写法
-        
-        
+        make.left.right.equalTo(@0);
+        // 因为 Masonry 在实现的时候，充分考虑到我们写约束的时候越简单越好，所以引入了链式写法，我们在写的时候，可以尽量的将一样的约束写到一起。
     }];
-    
     [password mas_makeConstraints:^(MASConstraintMaker *make) {
-       
         make.left.and.right.equalTo(@0);
         make.height.equalTo(@64);
-        make.top.equalTo(phoneText.mas_bottom);
+        make.top.equalTo(phonetext.mas_bottom);
     }];
-//    字重：可以简单理解为粗细
-    phoneText.font = [UIFont systemFontOfSize:15 weight:-0.15];
+    
+    phonetext.font = [UIFont systemFontOfSize:15 weight:-0.15];
     password.font = [UIFont systemFontOfSize:15 weight:-0.15];
     
-//    加边框的的时候记得是CGColor
-    phoneText.layer.borderColor = [UIColor grayColor].CGColor;
-    phoneText.layer.borderWidth = 0.5;
-    
+    phonetext.layer.borderColor = [UIColor grayColor].CGColor;
+    phonetext.layer.borderWidth = 0.5;
     password.layer.borderColor = [UIColor grayColor].CGColor;
     password.layer.borderWidth = 0.5;
     
-//    写自定义button一定要用这个工厂方法
+    // 写自定义 button 一定要用这个工厂方法。
     UIButton *forgetPass = [UIButton buttonWithType:UIButtonTypeCustom];
     [forgetPass setTitle:@"忘记密码" forState:UIControlStateNormal];
     [forgetPass titleLabel].font = [UIFont systemFontOfSize:14];
-    
-    [forgetPass setFrame:CGRectMake(self.view.frame.size.width-80, 280, 80, 64)];
+    // 80 64
+    // 我们用 autoLayout 时候，就不能再以某个视图的 frame 当做参数来用(此时，视图的 frame 是不可靠)
+    [forgetPass setFrame:CGRectMake(self.view.frame.size.width - 80, 250, 80, 64)];
     [self.view addSubview:forgetPass];
+    
 /*
  我们用自动布局的时候，就不能再以某个视图的frame当做参数来用，此时视图的frame是不可靠的
  
@@ -164,10 +151,60 @@
 //    让登录按钮的宽度和左边距离保持和父控件相对位置不变
      logininButton.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin;
     
+    [forgetPass setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    
+    [forgetPass handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakSender) {
+        CSForgetViewController *forgetVC = [[CSForgetViewController alloc]init];
+        [self.navigationController pushViewController:forgetVC animated:YES];
+    
+    }];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(goToRegister)];
+    
+    [phonetext handleControlEvents:UIControlEventEditingChanged withBlock:^(id weakSender) {
+        
+        if (phonetext.text.length >= 11) {
+            if (phonetext.text.length>11) {
+                
+                phonetext.text = [phonetext.text substringToIndex:11];
+            }
+            [password becomeFirstResponder];
+        }
+    }];
+    RAC(logininButton,enabled) = [RACSignal combineLatest:@[phonetext.rac_textSignal,password.rac_textSignal] reduce:^(NSString *phone,NSString *pass){
+        return @(phone.length >= 11 && pass.length >= 6);
+    }];
+    [logininButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakSender) {
+        
+        NSDictionary *paras = @{
+                                @"service":@"User.Login",
+                                @"phone":phonetext.text,
+                                @"password":[password.text md532BitUpper]
+                                };
+        [NetworkTool getDataWithParameters:paras completeBlock:^(BOOL success, id result) {
+            
+            if (success) {
+                NSLog(@"%@",result);
+                [CSUserModel loginWithInfo:result];
+                [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+            }else{
+                [UIAlertView alertWithCallBackBlock:nil title:@"温馨提示" message:result cancelButtonName:@"确定" otherButtonTitles: nil];
+            }
+        }];
+    }];
     
     
     
     
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+
+- (void)goToRegister{
+    
+    CSRegisterViewController *registerVC = [[CSRegisterViewController alloc]init];
+    [self.navigationController pushViewController:registerVC animated:YES];
     
 }
 

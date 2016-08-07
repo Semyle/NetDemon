@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		73F2FA2DAE36B2339A8DE6F4 /* libPods-SocialNet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FAC476AC9DE01DB4183E0F /* libPods-SocialNet.a */; };
+		BC53180D1D533BAC0066E452 /* CSForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC53180C1D533BAC0066E452 /* CSForgetViewController.m */; };
+		BC5318101D533BBA0066E452 /* CSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC53180F1D533BBA0066E452 /* CSRegisterViewController.m */; };
 		BC85B8FC1D50A4700052B0E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC85B8FB1D50A4700052B0E3 /* main.m */; };
 		BC85B8FF1D50A4700052B0E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC85B8FE1D50A4700052B0E3 /* AppDelegate.m */; };
 		BC85B9021D50A4700052B0E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC85B9011D50A4700052B0E3 /* ViewController.m */; };
@@ -84,12 +86,22 @@
 		BCA4BF321D519DEE003C9C25 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA4BEEC1D519DEE003C9C25 /* UIViewController+MJPopupViewController.m */; };
 		BCA4BF331D519DEE003C9C25 /* NSMutableString+TagReplace.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA4BEEF1D519DEE003C9C25 /* NSMutableString+TagReplace.m */; };
 		BCA4BF341D519DEE003C9C25 /* NSString+WPAttributedMarkup.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA4BEF11D519DEE003C9C25 /* NSString+WPAttributedMarkup.m */; };
+		BCF244BC1D570AAA00E1861F /* QFCodeShareInit.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF244BA1D570AAA00E1861F /* QFCodeShareInit.m */; };
+		BCF244C51D57215700E1861F /* CSEditNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF244BE1D57215700E1861F /* CSEditNameViewController.m */; };
+		BCF244C61D57215700E1861F /* CSInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF244C01D57215700E1861F /* CSInfoViewController.m */; };
+		BCF244C71D57215700E1861F /* CSMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF244C21D57215700E1861F /* CSMyViewController.m */; };
+		BCF244C81D57215700E1861F /* CSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF244C41D57215700E1861F /* CSSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6DE843117583D1F8187F15B9 /* Pods-SocialNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNet/Pods-SocialNet.debug.xcconfig"; sourceTree = "<group>"; };
 		75FAC476AC9DE01DB4183E0F /* libPods-SocialNet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialNet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B522CE523975625B9ED66B6 /* Pods-SocialNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNet.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNet/Pods-SocialNet.release.xcconfig"; sourceTree = "<group>"; };
+		BC53180B1D533BAC0066E452 /* CSForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSForgetViewController.h; sourceTree = "<group>"; };
+		BC53180C1D533BAC0066E452 /* CSForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSForgetViewController.m; sourceTree = "<group>"; };
+		BC53180E1D533BBA0066E452 /* CSRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRegisterViewController.h; sourceTree = "<group>"; };
+		BC53180F1D533BBA0066E452 /* CSRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSRegisterViewController.m; sourceTree = "<group>"; };
+		BC5318111D5345140066E452 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		BC85B8F71D50A4700052B0E3 /* SocialNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC85B8FB1D50A4700052B0E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC85B8FD1D50A4700052B0E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -240,6 +252,18 @@
 		BCA4BEEF1D519DEE003C9C25 /* NSMutableString+TagReplace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+TagReplace.m"; sourceTree = "<group>"; };
 		BCA4BEF01D519DEE003C9C25 /* NSString+WPAttributedMarkup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WPAttributedMarkup.h"; sourceTree = "<group>"; };
 		BCA4BEF11D519DEE003C9C25 /* NSString+WPAttributedMarkup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WPAttributedMarkup.m"; sourceTree = "<group>"; };
+		BCF244B81D570AAA00E1861F /* LxDBAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
+		BCF244B91D570AAA00E1861F /* QFCodeShareInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFCodeShareInit.h; sourceTree = "<group>"; };
+		BCF244BA1D570AAA00E1861F /* QFCodeShareInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFCodeShareInit.m; sourceTree = "<group>"; };
+		BCF244BB1D570AAA00E1861F /* QFCommonSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFCommonSetting.h; sourceTree = "<group>"; };
+		BCF244BD1D57215700E1861F /* CSEditNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEditNameViewController.h; sourceTree = "<group>"; };
+		BCF244BE1D57215700E1861F /* CSEditNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSEditNameViewController.m; sourceTree = "<group>"; };
+		BCF244BF1D57215700E1861F /* CSInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSInfoViewController.h; sourceTree = "<group>"; };
+		BCF244C01D57215700E1861F /* CSInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSInfoViewController.m; sourceTree = "<group>"; };
+		BCF244C11D57215700E1861F /* CSMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMyViewController.h; sourceTree = "<group>"; };
+		BCF244C21D57215700E1861F /* CSMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSMyViewController.m; sourceTree = "<group>"; };
+		BCF244C31D57215700E1861F /* CSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSettingViewController.h; sourceTree = "<group>"; };
+		BCF244C41D57215700E1861F /* CSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +289,8 @@
 		BC85B8EE1D50A4700052B0E3 = {
 			isa = PBXGroup;
 			children = (
+				BCF244B71D570AAA00E1861F /* CommonSetting */,
+				BC5318111D5345140066E452 /* PrefixHeader.pch */,
 				BCA4BE591D519DEE003C9C25 /* Addition */,
 				BCA4BE4F1D51872C003C9C25 /* Models */,
 				BC85B9141D50BE7B0052B0E3 /* Tool */,
@@ -311,12 +337,24 @@
 		BC85B9121D50A5B30052B0E3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BCF244BD1D57215700E1861F /* CSEditNameViewController.h */,
+				BCF244BE1D57215700E1861F /* CSEditNameViewController.m */,
+				BCF244BF1D57215700E1861F /* CSInfoViewController.h */,
+				BCF244C01D57215700E1861F /* CSInfoViewController.m */,
+				BCF244C11D57215700E1861F /* CSMyViewController.h */,
+				BCF244C21D57215700E1861F /* CSMyViewController.m */,
+				BCF244C31D57215700E1861F /* CSSettingViewController.h */,
+				BCF244C41D57215700E1861F /* CSSettingViewController.m */,
 				BCA4BE4C1D517F9E003C9C25 /* CSViewController.h */,
 				BCA4BE4D1D517F9E003C9C25 /* CSViewController.m */,
 				BCA4BE531D518828003C9C25 /* MainViewController.h */,
 				BCA4BE541D518828003C9C25 /* MainViewController.m */,
 				BCA4BE561D5188CC003C9C25 /* CSLoginViewController.h */,
 				BCA4BE571D5188CC003C9C25 /* CSLoginViewController.m */,
+				BC53180B1D533BAC0066E452 /* CSForgetViewController.h */,
+				BC53180C1D533BAC0066E452 /* CSForgetViewController.m */,
+				BC53180E1D533BBA0066E452 /* CSRegisterViewController.h */,
+				BC53180F1D533BBA0066E452 /* CSRegisterViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -612,6 +650,17 @@
 			path = WPAttributedMarkup;
 			sourceTree = "<group>";
 		};
+		BCF244B71D570AAA00E1861F /* CommonSetting */ = {
+			isa = PBXGroup;
+			children = (
+				BCF244B81D570AAA00E1861F /* LxDBAnything.h */,
+				BCF244B91D570AAA00E1861F /* QFCodeShareInit.h */,
+				BCF244BA1D570AAA00E1861F /* QFCodeShareInit.m */,
+				BCF244BB1D570AAA00E1861F /* QFCommonSetting.h */,
+			);
+			path = CommonSetting;
+			sourceTree = "<group>";
+		};
 		C7836CB1674508623BE91E51 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,11 +799,14 @@
 				BCA4BF101D519DEE003C9C25 /* UIImage+Blur.m in Sources */,
 				BCA4BEF91D519DEE003C9C25 /* NSDictionary+URL.m in Sources */,
 				BCA4BE4E1D517F9E003C9C25 /* CSViewController.m in Sources */,
+				BC53180D1D533BAC0066E452 /* CSForgetViewController.m in Sources */,
 				BCA4BF321D519DEE003C9C25 /* UIViewController+MJPopupViewController.m in Sources */,
 				BCA4BEF81D519DEE003C9C25 /* NSDictionary+SafeAccess.m in Sources */,
 				BCA4BF181D519DEE003C9C25 /* UIImage+Tint.m in Sources */,
 				BCA4BF091D519DEE003C9C25 /* UIApplication+ApplicationSize.m in Sources */,
 				BCA4BF041D519DEE003C9C25 /* NSString+Trims.m in Sources */,
+				BCF244C71D57215700E1861F /* CSMyViewController.m in Sources */,
+				BCF244BC1D570AAA00E1861F /* QFCodeShareInit.m in Sources */,
 				BCA4BF131D519DEE003C9C25 /* UIImage+Color.m in Sources */,
 				BC85B9171D50BEB10052B0E3 /* NetworkTool.m in Sources */,
 				BCA4BF141D519DEE003C9C25 /* UIImage+FileName.m in Sources */,
@@ -789,11 +841,13 @@
 				BCA4BE551D518828003C9C25 /* MainViewController.m in Sources */,
 				BCA4BF031D519DEE003C9C25 /* NSString+Size.m in Sources */,
 				BCA4BF2C1D519DEE003C9C25 /* UIView+Shadow.m in Sources */,
+				BC5318101D533BBA0066E452 /* CSRegisterViewController.m in Sources */,
 				BCA4BF291D519DEE003C9C25 /* UIView+draggable.m in Sources */,
 				BCA4BF071D519DEE003C9C25 /* NSTimer+Blocks.m in Sources */,
 				BCA4BF251D519DEE003C9C25 /* UITableViewCell+Config.m in Sources */,
 				BCA4BF1A1D519DEE003C9C25 /* UIImageView+BetterFace.m in Sources */,
 				BCA4BEFF1D519DEE003C9C25 /* NSObject+Runtime.m in Sources */,
+				BCF244C81D57215700E1861F /* CSSettingViewController.m in Sources */,
 				BCA4BF1E1D519DEE003C9C25 /* UINavigationController+BATransitions.m in Sources */,
 				BCA4BF341D519DEE003C9C25 /* NSString+WPAttributedMarkup.m in Sources */,
 				BCA4BF281D519DEE003C9C25 /* UIView+Borders.m in Sources */,
@@ -801,6 +855,7 @@
 				BCA4BF211D519DEE003C9C25 /* UINavigationItem+Loading.m in Sources */,
 				BCA4BEF51D519DEE003C9C25 /* NSDate+Utilities.m in Sources */,
 				BCA4BF0C1D519DEE003C9C25 /* UIButton+Submitting.m in Sources */,
+				BCF244C51D57215700E1861F /* CSEditNameViewController.m in Sources */,
 				BCA4BEF31D519DEE003C9C25 /* NSDate+Helper.m in Sources */,
 				BCA4BF331D519DEE003C9C25 /* NSMutableString+TagReplace.m in Sources */,
 				BCA4BF001D519DEE003C9C25 /* NSString+JsonValue.m in Sources */,
@@ -811,6 +866,7 @@
 				BCA4BEFB1D519DEE003C9C25 /* NSObject+AutoCoding.m in Sources */,
 				BCA4BF2F1D519DEE003C9C25 /* UIView+Visuals.m in Sources */,
 				BC85B8FF1D50A4700052B0E3 /* AppDelegate.m in Sources */,
+				BCF244C61D57215700E1861F /* CSInfoViewController.m in Sources */,
 				BC85B8FC1D50A4700052B0E3 /* main.m in Sources */,
 				BCA4BEF21D519DEE003C9C25 /* NSDate+Formatter.m in Sources */,
 				BCA4BF2B1D519DEE003C9C25 /* UIView+Screenshot.m in Sources */,
@@ -928,6 +984,7 @@
 			baseConfigurationReference = 6DE843117583D1F8187F15B9 /* Pods-SocialNet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/qianfeng/Desktop/SocialNet/PrefixHeader.pch;
 				INFOPLIST_FILE = SocialNet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lin.SocialNet;
@@ -940,6 +997,7 @@
 			baseConfigurationReference = 9B522CE523975625B9ED66B6 /* Pods-SocialNet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/qianfeng/Desktop/SocialNet/PrefixHeader.pch;
 				INFOPLIST_FILE = SocialNet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lin.SocialNet;

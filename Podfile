@@ -12,6 +12,8 @@ pod 'MOBFoundation_IDFA'
 
 #自动布局Autolayout
 pod 'Masonry'
+pod 'ReactiveCocoa','2.0'
+pod 'YYModel'
 
 
   # Pods for SocialNet
