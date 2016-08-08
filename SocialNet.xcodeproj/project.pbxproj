@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		73F2FA2DAE36B2339A8DE6F4 /* libPods-SocialNet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FAC476AC9DE01DB4183E0F /* libPods-SocialNet.a */; };
+		BC0F53531D5826D1002887CA /* CSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F53521D5826D1002887CA /* CSAboutViewController.m */; };
 		BC53180D1D533BAC0066E452 /* CSForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC53180C1D533BAC0066E452 /* CSForgetViewController.m */; };
 		BC5318101D533BBA0066E452 /* CSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC53180F1D533BBA0066E452 /* CSRegisterViewController.m */; };
 		BC85B8FC1D50A4700052B0E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC85B8FB1D50A4700052B0E3 /* main.m */; };
@@ -97,6 +98,8 @@
 		6DE843117583D1F8187F15B9 /* Pods-SocialNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNet/Pods-SocialNet.debug.xcconfig"; sourceTree = "<group>"; };
 		75FAC476AC9DE01DB4183E0F /* libPods-SocialNet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialNet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B522CE523975625B9ED66B6 /* Pods-SocialNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNet.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNet/Pods-SocialNet.release.xcconfig"; sourceTree = "<group>"; };
+		BC0F53511D5826D1002887CA /* CSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAboutViewController.h; sourceTree = "<group>"; };
+		BC0F53521D5826D1002887CA /* CSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAboutViewController.m; sourceTree = "<group>"; };
 		BC53180B1D533BAC0066E452 /* CSForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSForgetViewController.h; sourceTree = "<group>"; };
 		BC53180C1D533BAC0066E452 /* CSForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSForgetViewController.m; sourceTree = "<group>"; };
 		BC53180E1D533BBA0066E452 /* CSRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRegisterViewController.h; sourceTree = "<group>"; };
@@ -355,6 +358,8 @@
 				BC53180C1D533BAC0066E452 /* CSForgetViewController.m */,
 				BC53180E1D533BBA0066E452 /* CSRegisterViewController.h */,
 				BC53180F1D533BBA0066E452 /* CSRegisterViewController.m */,
+				BC0F53511D5826D1002887CA /* CSAboutViewController.h */,
+				BC0F53521D5826D1002887CA /* CSAboutViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -824,6 +829,7 @@
 				BCA4BF2D1D519DEE003C9C25 /* UIView+Shake.m in Sources */,
 				BCA4BF231D519DEE003C9C25 /* UINavigationItem+Margin.m in Sources */,
 				BCA4BF0B1D519DEE003C9C25 /* UIButton+BackgroundColor.m in Sources */,
+				BC0F53531D5826D1002887CA /* CSAboutViewController.m in Sources */,
 				BCA4BF261D519DEE003C9C25 /* UIView+Animation.m in Sources */,
 				BCA4BF0D1D519DEE003C9C25 /* UIButton+TouchAreaInsets.m in Sources */,
 				BCA4BEFA1D519DEE003C9C25 /* NSObject+AppInfo.m in Sources */,
@@ -989,6 +995,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lin.SocialNet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Debug;
 		};
@@ -1002,6 +1009,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lin.SocialNet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Release;
 		};

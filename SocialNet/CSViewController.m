@@ -10,6 +10,7 @@
 #import "CSUserModel.h"
 #import "MainViewController.h"
 #import "CSLoginViewController.h"
+#import "CSMyViewController.h"
 
 @interface CSViewController ()
 
@@ -58,25 +59,25 @@
                                  @{
                                      @"class":[MainViewController class],
                                      @"title":@"首页",
-                                     @"icon":@"tabBar1",
+                                     @"icon":@"按钮主页",
                                      
                                      },
                                  @{
                                      @"class":[UIViewController class],
                                      @"title":@"第二页",
-                                     @"icon":@"tabBar2",
+                                     @"icon":@"按钮消息",
                                      
                                      },
                                  @{
                                      @"class":[UIViewController class],
                                      @"title":@"第四页",
-                                     @"icon":@"tabBar3",
+                                     @"icon":@"按钮分享",
                                      
                                      },
                                  @{
-                                     @"class":[UIViewController class],
-                                     @"title":@"第五页",
-                                     @"icon":@"tabBar4",
+                                     @"class":[CSMyViewController class],
+                                     @"title":@"我的",
+                                     @"icon":@"按钮我的",
                                      
                                      },
                                  ];
@@ -90,6 +91,7 @@
 //        这里直接拿遍历传过来的字典，取出其中的控制器类型，然后创建一个控制器
         UIViewController *viewController = [[[obj objectForKey:@"class"] alloc]init];
         viewController.title = [obj objectForKey:@"title"];
+        viewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:[obj objectForKey:@"title"] image:[UIImage imageNamed:[obj objectForKey:@"icon"]] tag:0];
         
 //        再创建一个导航控制器 装入刚才创建的控制器
         UINavigationController *navVC = [[UINavigationController alloc]initWithRootViewController:viewController];

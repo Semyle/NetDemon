@@ -18,6 +18,11 @@
 
 // 内容视图，加在 scrollView 上面，所有其他视图需要加到这个视图上面，也实现了当内容不够的时候，界面也能有弹性滚动效果
 @property (nonatomic, weak) UIView *contentView;
+@property (nonatomic, weak) UIImageView *headImageView;
+@property (nonatomic, weak) UILabel *nickNameLabel;
+@property (nonatomic, weak) UILabel *emailNameLabel;
+
+
 
 @end
 
@@ -132,8 +137,34 @@
 	}];
 	// 将ImageView 的用户交互打开
 	backImageView.userInteractionEnabled = YES;
+    self.headImageView = headImageView;
+    self.nickNameLabel = nickNameLabel;
+    self.emailNameLabel = emailLabel;
 	
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    我们将用户信息的现实写到这里，每次进入到这个页面,可能会有新的内容需要修改，以下为用户进入到这个页面的一些可能性：
+//    1.用户刚登录成功
+//    2.用户在设置页面修改了资料，回到了这个页面
+//    3.用户退出登录，有登陆另外一个账号
+    
+    
+//    [self.headImageView ]
+    
+    
+}
+
+
+
+
+
+/***
+ 1.做完注册登录后，要将用户信息显示完整
+ 2.退出登录时，要做相应的处理，
+ 3.当影虎修改信息后，要显示最新的修改
+ **/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

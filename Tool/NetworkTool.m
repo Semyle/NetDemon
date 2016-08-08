@@ -29,7 +29,7 @@ static NSString *baseUrl = @"https://www.1000phone.tk";
     static AFHTTPSessionManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[AFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:baseUrl]];
+        manager = [[AFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:QFAppBaseURL]];
         manager.requestSerializer.timeoutInterval = 30.0;
         manager.responseSerializer = [AFJSONResponseSerializer serializer];
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json", @"text/html", @"text/xml", @"application/json", nil];

@@ -14,6 +14,8 @@ pod 'MOBFoundation_IDFA'
 pod 'Masonry'
 pod 'ReactiveCocoa','2.0'
 pod 'YYModel'
+pod 'YYImage'
+pod 'YYWebImage'
 
 
   # Pods for SocialNet

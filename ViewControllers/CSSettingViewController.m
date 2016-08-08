@@ -7,6 +7,7 @@
 //
 
 #import "CSSettingViewController.h"
+#import "CSAboutViewController.h"
 
 #import "CSInfoViewController.h"
 
